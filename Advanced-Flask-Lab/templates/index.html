@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
 	</head>
 	<body>
+		{% for i in posts%}
+		<li><img src={{i}}></li>
+		<h1>{{posts[i]}}</h1>
+		
+		{% endfor %}
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -15,7 +20,7 @@
 					<header id="header">
 						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>{{user}}</h1>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -38,12 +43,12 @@
                 
                 <div>
                       <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
+                        <img src= {{image}} />
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
+                        <img src="{{url_for('static',filename='images/thumbs/02.jpg')}}" alt="" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>    
@@ -52,6 +57,11 @@
                         <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
+
+
+                 
+
+
                 </div>  
 
 							</section>

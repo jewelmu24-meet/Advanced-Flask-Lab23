@@ -19,18 +19,17 @@ posts = {
     "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de6d502d6d70c0ad49a060c_6.jpg": "#MEET_DU",
     "https://global-uploads.webflow.com/5fe28feebcae602620061802/5fe5401840671a36cd1d47d5_5de6d5024dd1a74670173aed_1-p-1080.jpeg": "Our lovely TAs!"}
 
-
 #####
 
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html')
+    return render_template('index.html',image = image_link, user=user_bio, posts=posts)
 
 
 @app.route('/about')  # '/' for the default page
 def about():
-    return render_template('about.html')
+    return render_template('about.html',)
 
 
 if __name__ == "__main__":  # Makes sure this is the main process
